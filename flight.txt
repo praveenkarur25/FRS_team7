@@ -1,0 +1,97 @@
+create table frs_tbl_flight(
+    flight_name varchar(50) Not null ,
+    flight_From varchar(50) Not Null,
+   Departuretime varchar(5),
+   Arrivaltime varchar(5),
+   Business_class_fare int,
+   Economy_class_fare int,
+   First_class_fare int,
+flight_to varchar(30),
+   booked_seats int,
+   availabledays varchar(30),
+   flightid varchar(6)
+ );
+
+
+
+create table frs_tbl_users_profile(
+firstname varchar2(50),
+lastname varchar2(50),
+username varchar2(100),
+email varchar2(70),
+password varchar2(16),
+phonenumber varchar2(10),
+id int,
+userid varchar2(6),
+Dob varchar(10),
+gender varchar2(7),
+street varchar2(20),
+location varchar2(20),
+city varchar2(20),
+state varchar2(20),
+district varchar(20),
+pincode varchar(6)
+);
+ 
+create table frs_tbl_route(
+flightid varchar(6),
+routeid varchar2(8),
+source varchar(20) Not null,
+destination varchar(20) not null,
+distance number,
+fare number
+);
+
+
+
+
+create sequence flightid_seq
+   start with 1000
+   increment by 1;
+
+
+create sequence ticketid_seq
+start with 1000100
+increment by 1;
+
+create sequence routeid_seq
+    start with 1000
+   increment by 1;
+
+
+create table frs_tbl_schedule(
+flightid varchar(6) not null,
+routeid varchar(8) not null,
+travelduration int ,
+availabledays varchar(30),
+departuretime varchar(5),
+Arrivaltime varchar(5)
+);
+
+
+create table frs_tbl_booking_details(
+userid varchar(6),
+flightid varchar(6),
+username varchar(80),
+name varchar(100),
+flight_from varchar(30),
+flight_to varchar(30),
+fare int,
+ticketnumber varchar(10),
+dateofjourney varchar(10),
+seats varchar(20)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
